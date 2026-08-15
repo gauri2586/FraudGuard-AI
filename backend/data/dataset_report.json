@@ -1,0 +1,29 @@
+{
+  "train_transaction": {
+    "rows": 590540,
+    "columns": 394,
+    "missing_values_note": "Many 'V' columns contain >80% missing values.",
+    "duplicate_rows": 0,
+    "numerical_features": ["TransactionAmt", "C1", "C2", "D1", "D2", "V1", "V2"],
+    "categorical_features": ["ProductCD", "card4", "card6", "P_emaildomain", "R_emaildomain", "M1", "M2"],
+    "useless_high_missing": ["V1", "V2", "dist2", "D7", "D8"]
+  },
+  "train_identity": {
+    "rows": 144233,
+    "columns": 41,
+    "missing_values_note": "Many identity columns like 'id_24' have missing values for a large portion of transactions.",
+    "duplicate_rows": 0,
+    "categorical_features": ["DeviceType", "DeviceInfo", "id_12", "id_30", "id_31", "id_33"]
+  },
+  "target_column": "isFraud",
+  "legitimate_transactions": 569877,
+  "fraudulent_transactions": 20663,
+  "fraud_percentage": 3.5,
+  "can_be_joined": true,
+  "common_keys": [
+    "TransactionID"
+  ],
+  "data_leakage_risks": [
+    "TransactionDT"
+  ]
+}

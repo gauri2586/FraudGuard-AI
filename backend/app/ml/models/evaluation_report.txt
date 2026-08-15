@@ -1,0 +1,6 @@
+Best Model: XGBoost
+F1-Score: 0.4293
+Recall: 0.7122
+Confusion Matrix:
+[[21467  1328]
+ [  238   589]]

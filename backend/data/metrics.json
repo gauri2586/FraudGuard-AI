@@ -1,0 +1,32 @@
+{
+  "dataset": {
+    "total_transactions": 590540,
+    "fraud_cases": 20663,
+    "legitimate_cases": 569877,
+    "fraud_percentage": 3.5,
+    "feature_count": 394
+  },
+  "xgboost": {
+    "precision": 22.77,
+    "recall": 70.49,
+    "f1_score": 34.42,
+    "roc_auc": 90.09,
+    "pr_auc": 47.39,
+    "confusion_matrix": {
+      "tn": 51550,
+      "tp": 1560,
+      "fp": 5291,
+      "fn": 653
+    }
+  },
+  "isolation_forest": {
+    "methodology": "Trained exclusively on 455,833 legitimate transactions (contamination=0.001) to learn normal behavior boundaries using distance-like partitioning.",
+    "avg_legit_score": 18.65,
+    "avg_fraud_score": 32.68
+  },
+  "autoencoder": {
+    "methodology": "76-32-16-32-76 bottleneck neural network trained on legitimate transactions using MSE loss. Fraudulent transactions struggle to reconstruct through the bottleneck.",
+    "avg_legit_error": 0.72,
+    "avg_fraud_error": 1.99
+  }
+}

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+ 
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 258 65% 58%;
+    --secondary-foreground: 0 0% 100%;
+ 
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+ 
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 224 71% 4%;
+ 
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 348 83% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221.2 83.2% 53.3%;
+ 
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Deep navy / near-black background */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    /* Neutral dark gray surfaces */
+    --card: 224 71% 6%;
+    --card-foreground: 213 31% 91%;
+ 
+    --popover: 224 71% 6%;
+    --popover-foreground: 213 31% 91%;
+ 
+    /* Professional Fintech Blue */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+ 
+    /* Subtle violet secondary accent */
+    --secondary: 258 65% 58%;
+    --secondary-foreground: 0 0% 100%;
+ 
+    /* Neutral muted elements */
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 223 47% 11%;
+    --accent-foreground: 213 31% 91%;
+ 
+    /* Feedback states */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 348 83% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Very subtle, thin borders */
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 221.2 83.2% 53.3%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at 50% -20%, hsl(var(--primary) / 0.15) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-card border border-border shadow-md;
+  }
+  .glass-card {
+    @apply bg-card border border-border/50 hover:border-border transition-colors duration-200;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}

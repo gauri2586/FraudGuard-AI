@@ -32,18 +32,19 @@ export default function AlertsPage() {
       
       // Map backend AlertResponse to frontend FraudAlert
       const mapped: FraudAlert[] = data.map((alert: any) => ({
-        id: `ALT-${alert.id}`,
+        id: `ALT-${alert.alert_id}`,
         transactionId: alert.transaction_id,
-        user: alert.transaction.user_id,
-        amount: alert.transaction.amount,
-        riskScore: Math.round(alert.transaction.final_risk_score),
+        user: alert.user,
+        amount: alert.amount,
+        riskScore: alert.risk_score,
+        fraudProbability: alert.fraud_probability,
         severity: alert.severity.toLowerCase() as AlertSeverity,
         status: alert.status.toLowerCase() as StatusType,
-        time: new Date(alert.created_at).toLocaleString(),
-        reasons: alert.transaction.contributing_factors || ["High risk detected"],
+        time: alert.timestamp,
+        reasons: [alert.reason],
         modelsFlagged: ["XGBoost", "Isolation Forest"],
-        location: alert.transaction.location || "Online",
-        device: alert.transaction.device_type
+        location: alert.location,
+        device: alert.device
       }))
       
       setAlerts(mapped)

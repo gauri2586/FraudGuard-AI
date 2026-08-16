@@ -12,9 +12,10 @@ import { cn } from "@/lib/utils"
 
 interface Explanation {
   feature: string;
-  display_name: string;
-  impact: number;
-  direction: 'increases_risk' | 'decreases_risk';
+  value: number | string;
+  shap_value: number;
+  effect: 'increases_risk' | 'decreases_risk';
+  explanation: string;
 }
 
 interface SimulationResult {
@@ -492,17 +493,17 @@ export default function Simulator() {
                               className="flex justify-between items-start border-b border-border/50 pb-3 last:border-0 last:pb-0"
                             >
                                <div>
-                                 <div className="text-sm font-medium">{exp.display_name}</div>
+                                 <div className="text-sm font-medium">{exp.feature}</div>
                                  <div className="text-xs text-muted-foreground mt-0.5">
-                                   {exp.direction === 'increases_risk' ? 'Increases risk' : 'Decreases risk'}
+                                   {exp.explanation}
                                  </div>
                                </div>
                                <div className={cn(
                                  "flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-full",
-                                 exp.direction === 'increases_risk' ? 'bg-destructive/10 text-destructive' : 'bg-success/10 text-success'
+                                 exp.effect === 'increases_risk' ? 'bg-destructive/10 text-destructive' : 'bg-success/10 text-success'
                                )}>
-                                 {exp.direction === 'increases_risk' ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
-                                 {Math.abs(exp.impact * 100).toFixed(1)}
+                                 {exp.effect === 'increases_risk' ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
+                                 {Math.abs(exp.shap_value * 100).toFixed(1)}
                                </div>
                             </motion.div>
                           ))

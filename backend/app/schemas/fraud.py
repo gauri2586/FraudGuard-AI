@@ -22,17 +22,37 @@ class TransactionInput(BaseModel):
 class FraudPredictionResponse(BaseModel):
     """
     Schema for the response returned by the prediction endpoint.
-    Now supports full ML output.
+    Includes all Hybrid Risk Engine signals.
     """
     transaction_id: str
-    risk_score: int
-    risk_level: str
+    
+    # Core outputs
     fraud_probability: float
+    fraud_detected: bool
+    final_risk_score: int
+    risk_level: str
+    
+    # Individual model scores (0-100 normalized)
+    xgboost_score: int
+    isolation_forest_score: int
+    autoencoder_score: int
+    
+    # Explanations
+    explanations: list
+    
+    # Metadata
+    model_status: str
+    model_name: Optional[str] = "FraudGuard Hybrid Engine"
+    model_version: Optional[str] = "2.0.0"
+    message: Optional[str] = None
+    
+    # Legacy fields for UI compatibility
+    risk_score: int
     is_fraud: bool
     requires_investigation: bool
     model_scores: dict
-    explanations: list
-    model_status: str
-    model_name: Optional[str] = "XGBoost Hybrid Pipeline"
-    model_version: Optional[str] = "1.0.0"
-    message: Optional[str] = None
+    
+    model_config = {
+        "extra": "allow",
+        "protected_namespaces": ()
+    }

@@ -31,8 +31,12 @@ export default function AnalyticsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [txData, mxData] = await Promise.all([getTransactions(), getMetrics()])
-        if (Array.isArray(txData)) setTransactions(txData)
+        const [txData, mxData] = await Promise.all([getTransactions({ limit: 100 }), getMetrics()])
+        if (txData && Array.isArray(txData.data)) {
+          setTransactions(txData.data)
+        } else if (Array.isArray(txData)) {
+          setTransactions(txData)
+        }
         setMetrics(mxData)
       } catch (e) {
         console.error("Failed to load analytics data", e)

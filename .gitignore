@@ -1,16 +1,146 @@
-# Python / Backend
-venv/
-.venv/
+# --- Environment Variables ---
 .env
+.env.*
+!.env.example
+
+# --- Python ---
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
 
-# Data
-data/raw/
-backend/data/raw/
-*.csv
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
 
-# Frontend
-node_modules/
+# Distribution / packaging
+build/
 dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# --- Node / Frontend (React/Vite) ---
+node_modules/
+.vite/
+.eslintcache
+*.tsbuildinfo
+
+# --- Machine Learning / Data ---
+# Model artifacts
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+
+# Datasets
+datasets/
+data/
+backend/data/
+ml/data/
+*.csv
+*.tsv
+*.npz
+*.npy
+
+# --- IDEs / Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS generated files ---
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- Logs ---
+*.log
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python test/cache files
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large/raw datasets
+backend/data/raw/
+backend/data/**/*.csv
+*.csv
+*.zip
+
+# Local database
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated inspection files
+backend/inspect_*.json
+
+# Temporary/generated files
+*.log
+# Large ML training artifacts
+backend/ml/artifacts/X_train.joblib
+backend/ml/artifacts/X_val.joblib
+backend/ml/artifacts/y_train.joblib
+backend/ml/artifacts/y_val.joblib
+
+# Large Isolation Forest model
+backend/ml/artifacts/isolation_forest.joblib
+# Keep required trained ML inference artifacts
+!backend/ml/artifacts/
+!backend/ml/artifacts/autoencoder.joblib
+!backend/ml/artifacts/autoencoder.keras
+!backend/ml/artifacts/autoencoder_metadata.json
+!backend/ml/artifacts/autoencoder_scaler.joblib
+!backend/ml/artifacts/iforest_metadata.json
+!backend/ml/artifacts/iforest_scaler.joblib
+!backend/ml/artifacts/preprocessing_pipeline.joblib
+!backend/ml/artifacts/xgboost_fraud_model.json
+!backend/ml/artifacts/xgboost_metadata.json
+
+# Continue excluding large training artifacts
+backend/ml/artifacts/X_train.joblib
+backend/ml/artifacts/X_val.joblib
+backend/ml/artifacts/y_train.joblib
+backend/ml/artifacts/y_val.joblib
+backend/ml/artifacts/isolation_forest.joblib

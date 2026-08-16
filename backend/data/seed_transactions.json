@@ -1,952 +1,33 @@
 [
   {
-    "id": "2988760",
-    "user": "User-6542",
-    "amount": 75.0,
-    "merchant": "Merchant-174.0",
+    "id": "TX-18532",
+    "user": "User-Unknown",
+    "amount": 196.14,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
     "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 20,
-    "status": "new",
-    "type": "H",
-    "aiConfidence": 21,
-    "modelScores": {
-      "xgboost": 20,
-      "isolationForest": 36,
-      "autoencoder": 2
-    },
-    "explanations": [
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.6944039463996887,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.43616822361946106,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.4321349859237671,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "R_emaildomain",
-        "display_name": "Receiver Email Domain",
-        "impact": 0.36975887417793274,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.30861133337020874,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987405",
-    "user": "User-4504",
-    "amount": 90.57,
-    "merchant": "Merchant-500.0",
-    "location": "Online",
-    "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 41,
-    "status": "new",
-    "type": "C",
-    "aiConfidence": 56,
-    "modelScores": {
-      "xgboost": 56,
-      "isolationForest": 36,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.4885639250278473,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.3957264721393585,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2502897381782532,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "R_emaildomain",
-        "display_name": "Receiver Email Domain",
-        "impact": 0.2015247792005539,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card3",
-        "display_name": "Payment Card ID 3",
-        "impact": 0.1722860485315323,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988235",
-    "user": "User-10057",
-    "amount": 40.0,
-    "merchant": "Merchant-225.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 28,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 46,
-    "modelScores": {
-      "xgboost": 45,
-      "isolationForest": 3,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.5961792469024658,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2688784599304199,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.254067599773407,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.22329188883304596,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.1864222139120102,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988643",
-    "user": "User-2803",
-    "amount": 110.0,
-    "merchant": "Merchant-100.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 21,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 34,
-    "modelScores": {
-      "xgboost": 34,
-      "isolationForest": 3,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.33468931913375854,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2898748219013214,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.2583616375923157,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.25511282682418823,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.2331497222185135,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987703",
-    "user": "User-12040",
-    "amount": 108.5,
-    "merchant": "Merchant-555.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 4,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 3,
-    "modelScores": {
-      "xgboost": 3,
-      "isolationForest": 12,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.5828374624252319,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.39852190017700195,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.3353133499622345,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "dist1",
-        "display_name": "Distance from Billing Address",
-        "impact": 0.27893170714378357,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.2546366751194,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988694",
-    "user": "User-15775",
-    "amount": 240.0,
-    "merchant": "Merchant-481.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 43,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 69,
-    "modelScores": {
-      "xgboost": 69,
-      "isolationForest": 10,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.5518658757209778,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.37572261691093445,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.28488248586654663,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2718695402145386,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.23719266057014465,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987308",
-    "user": "User-5033",
-    "amount": 25.95,
-    "merchant": "Merchant-269.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 4,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 5,
-    "modelScores": {
-      "xgboost": 5,
-      "isolationForest": 7,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.135329246520996,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.6263254284858704,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.484387069940567,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3258882164955139,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.29922762513160706,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988594",
-    "user": "User-18132",
-    "amount": 209.95,
-    "merchant": "Merchant-567.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 8,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 10,
-    "modelScores": {
-      "xgboost": 10,
-      "isolationForest": 11,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.0615737438201904,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.4766887128353119,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.39527612924575806,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.34621211886405945,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.2887584865093231,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987683",
-    "user": "User-5812",
-    "amount": 124.344,
-    "merchant": "Merchant-408.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 41,
-    "status": "new",
-    "type": "C",
-    "aiConfidence": 55,
-    "modelScores": {
-      "xgboost": 55,
-      "isolationForest": 41,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.5184767842292786,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.43143388628959656,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2441614419221878,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.20017693936824799,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C11",
-        "display_name": "Address/Card Frequency Count 11",
-        "impact": 0.19326956570148468,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987321",
-    "user": "User-9485",
-    "amount": 108.5,
-    "merchant": "Merchant-111.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
+    "timestamp": "2026-08-15 22:40:40",
     "riskScore": 44,
     "status": "new",
     "type": "W",
-    "aiConfidence": 71,
-    "modelScores": {
-      "xgboost": 71,
-      "isolationForest": 8,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.8867214322090149,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.5052623748779297,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.3755342364311218,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.2412078082561493,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "addr1",
-        "display_name": "Billing Region",
-        "impact": 0.23089519143104553,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988523",
-    "user": "User-7919",
-    "amount": 100.0,
-    "merchant": "Merchant-194.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 2,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 2,
-    "modelScores": {
-      "xgboost": 1,
-      "isolationForest": 6,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.731660008430481,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.40453803539276123,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3364819884300232,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.27569323778152466,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D4",
-        "display_name": "Days Since Previous Transaction 4",
-        "impact": 0.22104766964912415,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988974",
-    "user": "User-9257",
-    "amount": 75.0,
-    "merchant": "Merchant-225.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 4,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 4,
-    "modelScores": {
-      "xgboost": 3,
-      "isolationForest": 11,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.7318316102027893,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3732115626335144,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D4",
-        "display_name": "Days Since Previous Transaction 4",
-        "impact": 0.1940235197544098,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.19312740862369537,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C2",
-        "display_name": "Address/Card Frequency Count 2",
-        "impact": 0.18031570315361023,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988966",
-    "user": "User-17635",
-    "amount": 900.0,
-    "merchant": "Merchant-565.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 50,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 80,
-    "modelScores": {
-      "xgboost": 79,
-      "isolationForest": 15,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.8282124400138855,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3736206889152527,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.3028346598148346,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.30027279257774353,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "TransactionAmt_Log",
-        "display_name": "Log(Transaction Amount)",
-        "impact": 0.19763468205928802,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988211",
-    "user": "User-15497",
-    "amount": 50.0,
-    "merchant": "Merchant-490.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 32,
-    "status": "new",
-    "type": "H",
-    "aiConfidence": 42,
-    "modelScores": {
-      "xgboost": 41,
-      "isolationForest": 34,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.7123798131942749,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.4600317180156708,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.420728474855423,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "R_emaildomain",
-        "display_name": "Receiver Email Domain",
-        "impact": 0.3959427773952484,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.34502580761909485,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987389",
-    "user": "User-3821",
-    "amount": 150.0,
-    "merchant": "Merchant-111.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 17,
-    "status": "new",
-    "type": "H",
-    "aiConfidence": 16,
-    "modelScores": {
-      "xgboost": 15,
-      "isolationForest": 38,
-      "autoencoder": 2
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.43807709217071533,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.23237554728984833,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.23158873617649078,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.22489747405052185,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "id_17",
-        "display_name": "Identity Marker 17",
-        "impact": 0.2160535752773285,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987128",
-    "user": "User-4106",
-    "amount": 57.95,
-    "merchant": "Merchant-543.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 4,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 6,
-    "modelScores": {
-      "xgboost": 5,
-      "isolationForest": 5,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.8807768821716309,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.22738756239414215,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.21803155541419983,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.21437491476535797,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C2",
-        "display_name": "Address/Card Frequency Count 2",
-        "impact": 0.15822754800319672,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987781",
-    "user": "User-8732",
-    "amount": 10.0,
-    "merchant": "Merchant-360.0",
-    "location": "Online",
-    "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 72,
-    "status": "review",
-    "type": "S",
     "aiConfidence": 99,
     "modelScores": {
-      "xgboost": 98,
-      "isolationForest": 66,
-      "autoencoder": 1
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 1.4832223653793335,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.7730751633644104,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C8",
-        "display_name": "Address/Card Frequency Count 8",
-        "impact": 0.5864911079406738,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C11",
-        "display_name": "Address/Card Frequency Count 11",
-        "impact": 0.5403947830200195,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D8",
-        "display_name": "Days Since Previous Transaction 8",
-        "impact": 0.45072129368782043,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988064",
-    "user": "User-2801",
-    "amount": 90.872,
-    "merchant": "Merchant-296.0",
-    "location": "Online",
-    "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 75,
-    "status": "review",
-    "type": "C",
-    "aiConfidence": 99,
-    "modelScores": {
-      "xgboost": 99,
-      "isolationForest": 57,
+      "xgboost": 44,
+      "isolationForest": 21,
       "autoencoder": 24
     },
     "explanations": [
       {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.8975232839584351,
-        "direction": "increases_risk"
+        "feature": "TransactionAmt",
+        "value": 196.14,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.5836525559425354,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.4735700190067291,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.4172305762767792,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.38601791858673096,
-        "direction": "increases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -954,52 +35,1189 @@
     ]
   },
   {
-    "id": "2988702",
-    "user": "User-17524",
-    "amount": 450.0,
-    "merchant": "Merchant-170.0",
+    "id": "TX-16499",
+    "user": "User-Unknown",
+    "amount": 138.11,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
     "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 74,
+    "timestamp": "2026-08-15 22:32:36",
+    "riskScore": 18,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 92,
+    "modelScores": {
+      "xgboost": 18,
+      "isolationForest": 23,
+      "autoencoder": 39
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 138.11,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-3748",
+    "user": "User-Unknown",
+    "amount": 181.71,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 22:30:57",
+    "riskScore": 28,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 97,
+    "modelScores": {
+      "xgboost": 28,
+      "isolationForest": 12,
+      "autoencoder": 16
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 181.71,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-19930",
+    "user": "User-Unknown",
+    "amount": 25.59,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 22:17:23",
+    "riskScore": 35,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 91,
+    "modelScores": {
+      "xgboost": 35,
+      "isolationForest": 27,
+      "autoencoder": 33
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 25.59,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-7543",
+    "user": "User-Unknown",
+    "amount": 298.58,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 21:12:51",
+    "riskScore": 18,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 91,
+    "modelScores": {
+      "xgboost": 18,
+      "isolationForest": 12,
+      "autoencoder": 29
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 298.58,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-16494",
+    "user": "User-Unknown",
+    "amount": 131.78,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 20:04:21",
+    "riskScore": 25,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 93,
+    "modelScores": {
+      "xgboost": 25,
+      "isolationForest": 25,
+      "autoencoder": 6
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 131.78,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-2139",
+    "user": "User-Unknown",
+    "amount": 3438.18,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 19:59:49",
+    "riskScore": 85,
     "status": "review",
-    "type": "H",
+    "type": "W",
+    "aiConfidence": 99,
+    "modelScores": {
+      "xgboost": 85,
+      "isolationForest": 64,
+      "autoencoder": 66
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 3438.18,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-6490",
+    "user": "User-Unknown",
+    "amount": 89.89,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 19:24:51",
+    "riskScore": 40,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 96,
+    "modelScores": {
+      "xgboost": 40,
+      "isolationForest": 17,
+      "autoencoder": 9
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 89.89,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-15581",
+    "user": "User-Unknown",
+    "amount": 226.53,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 19:19:10",
+    "riskScore": 37,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 96,
+    "modelScores": {
+      "xgboost": 37,
+      "isolationForest": 31,
+      "autoencoder": 34
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 226.53,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-4912",
+    "user": "User-Unknown",
+    "amount": 14.47,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 19:12:15",
+    "riskScore": 29,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 89,
+    "modelScores": {
+      "xgboost": 29,
+      "isolationForest": 35,
+      "autoencoder": 26
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 14.47,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-17028",
+    "user": "User-Unknown",
+    "amount": 1937.99,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 18:48:15",
+    "riskScore": 85,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 94,
+    "modelScores": {
+      "xgboost": 85,
+      "isolationForest": 76,
+      "autoencoder": 63
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 1937.99,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-10839",
+    "user": "User-Unknown",
+    "amount": 206.43,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 18:47:39",
+    "riskScore": 14,
+    "status": "new",
+    "type": "W",
     "aiConfidence": 98,
     "modelScores": {
-      "xgboost": 98,
-      "isolationForest": 67,
+      "xgboost": 14,
+      "isolationForest": 15,
+      "autoencoder": 30
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 206.43,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-16390",
+    "user": "User-Unknown",
+    "amount": 5.88,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 18:36:52",
+    "riskScore": 5,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 96,
+    "modelScores": {
+      "xgboost": 5,
+      "isolationForest": 21,
+      "autoencoder": 7
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 5.88,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-4643",
+    "user": "User-Unknown",
+    "amount": 132.63,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 18:27:28",
+    "riskScore": 25,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 97,
+    "modelScores": {
+      "xgboost": 25,
+      "isolationForest": 13,
+      "autoencoder": 39
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 132.63,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-12890",
+    "user": "User-Unknown",
+    "amount": 208.0,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 18:09:19",
+    "riskScore": 13,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 95,
+    "modelScores": {
+      "xgboost": 13,
+      "isolationForest": 25,
+      "autoencoder": 29
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 208.0,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-832",
+    "user": "User-Unknown",
+    "amount": 208.09,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 17:43:09",
+    "riskScore": 7,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 99,
+    "modelScores": {
+      "xgboost": 7,
+      "isolationForest": 29,
+      "autoencoder": 18
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 208.09,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-8412",
+    "user": "User-Unknown",
+    "amount": 4132.88,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 17:14:55",
+    "riskScore": 93,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 93,
+    "modelScores": {
+      "xgboost": 93,
+      "isolationForest": 60,
+      "autoencoder": 76
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 4132.88,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-9297",
+    "user": "User-Unknown",
+    "amount": 232.43,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 17:12:08",
+    "riskScore": 12,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 87,
+    "modelScores": {
+      "xgboost": 12,
+      "isolationForest": 26,
+      "autoencoder": 37
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 232.43,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-2260",
+    "user": "User-Unknown",
+    "amount": 1123.69,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 15:58:01",
+    "riskScore": 77,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 97,
+    "modelScores": {
+      "xgboost": 77,
+      "isolationForest": 64,
+      "autoencoder": 60
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 1123.69,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-189",
+    "user": "User-Unknown",
+    "amount": 119.51,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 15:49:47",
+    "riskScore": 22,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 85,
+    "modelScores": {
+      "xgboost": 22,
+      "isolationForest": 12,
+      "autoencoder": 21
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 119.51,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-17529",
+    "user": "User-Unknown",
+    "amount": 212.08,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 14:36:39",
+    "riskScore": 12,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 86,
+    "modelScores": {
+      "xgboost": 12,
+      "isolationForest": 34,
+      "autoencoder": 27
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 212.08,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-12557",
+    "user": "User-Unknown",
+    "amount": 295.85,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 14:36:15",
+    "riskScore": 10,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 98,
+    "modelScores": {
+      "xgboost": 10,
+      "isolationForest": 15,
+      "autoencoder": 34
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 295.85,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-14002",
+    "user": "User-Unknown",
+    "amount": 18.72,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 13:31:47",
+    "riskScore": 16,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 94,
+    "modelScores": {
+      "xgboost": 16,
+      "isolationForest": 35,
+      "autoencoder": 34
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 18.72,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-10947",
+    "user": "User-Unknown",
+    "amount": 2758.2,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 13:11:45",
+    "riskScore": 83,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 94,
+    "modelScores": {
+      "xgboost": 83,
+      "isolationForest": 85,
+      "autoencoder": 78
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 2758.2,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-19327",
+    "user": "User-Unknown",
+    "amount": 107.23,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 12:48:47",
+    "riskScore": 34,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 92,
+    "modelScores": {
+      "xgboost": 34,
+      "isolationForest": 24,
+      "autoencoder": 31
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 107.23,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-894",
+    "user": "User-Unknown",
+    "amount": 286.37,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 12:28:09",
+    "riskScore": 14,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 95,
+    "modelScores": {
+      "xgboost": 14,
+      "isolationForest": 20,
+      "autoencoder": 19
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 286.37,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-8179",
+    "user": "User-Unknown",
+    "amount": 130.38,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 12:06:45",
+    "riskScore": 43,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 94,
+    "modelScores": {
+      "xgboost": 43,
+      "isolationForest": 14,
+      "autoencoder": 34
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 130.38,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-16097",
+    "user": "User-Unknown",
+    "amount": 57.72,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 11:49:00",
+    "riskScore": 31,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 97,
+    "modelScores": {
+      "xgboost": 31,
+      "isolationForest": 25,
+      "autoencoder": 29
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 57.72,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-2840",
+    "user": "User-Unknown",
+    "amount": 231.62,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 10:22:01",
+    "riskScore": 25,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 96,
+    "modelScores": {
+      "xgboost": 25,
+      "isolationForest": 24,
+      "autoencoder": 6
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 231.62,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-2348",
+    "user": "User-Unknown",
+    "amount": 1830.95,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 08:43:12",
+    "riskScore": 97,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 98,
+    "modelScores": {
+      "xgboost": 97,
+      "isolationForest": 63,
+      "autoencoder": 71
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 1830.95,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-11297",
+    "user": "User-Unknown",
+    "amount": 142.19,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 08:38:58",
+    "riskScore": 14,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 85,
+    "modelScores": {
+      "xgboost": 14,
+      "isolationForest": 5,
+      "autoencoder": 12
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 142.19,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-13453",
+    "user": "User-Unknown",
+    "amount": 97.05,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 08:37:21",
+    "riskScore": 26,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 85,
+    "modelScores": {
+      "xgboost": 26,
+      "isolationForest": 7,
+      "autoencoder": 26
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 97.05,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-12041",
+    "user": "User-Unknown",
+    "amount": 263.55,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 08:04:54",
+    "riskScore": 15,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 86,
+    "modelScores": {
+      "xgboost": 15,
+      "isolationForest": 39,
+      "autoencoder": 29
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 263.55,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-11390",
+    "user": "User-Unknown",
+    "amount": 274.08,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 07:27:35",
+    "riskScore": 38,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 93,
+    "modelScores": {
+      "xgboost": 38,
+      "isolationForest": 18,
+      "autoencoder": 36
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 274.08,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-3732",
+    "user": "User-Unknown",
+    "amount": 279.96,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 06:15:22",
+    "riskScore": 38,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 86,
+    "modelScores": {
+      "xgboost": 38,
+      "isolationForest": 33,
       "autoencoder": 8
     },
     "explanations": [
       {
         "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 1.033923864364624,
-        "direction": "increases_risk"
+        "value": 279.96,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.5185803771018982,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D8",
-        "display_name": "Days Since Previous Transaction 8",
-        "impact": 0.39573800563812256,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "R_emaildomain",
-        "display_name": "Receiver Email Domain",
-        "impact": 0.37525802850723267,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "id_13",
-        "display_name": "Identity Marker 13",
-        "impact": 0.3353502154350281,
-        "direction": "decreases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -1007,317 +1225,34 @@
     ]
   },
   {
-    "id": "2987485",
-    "user": "User-18092",
-    "amount": 25.0,
-    "merchant": "Merchant-583.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 12,
-    "status": "new",
-    "type": "H",
-    "aiConfidence": 8,
-    "modelScores": {
-      "xgboost": 7,
-      "isolationForest": 39,
-      "autoencoder": 1
-    },
-    "explanations": [
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.7742798328399658,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.6558745503425598,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.4373939037322998,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.3861232399940491,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "id_31",
-        "display_name": "Identity Marker 31",
-        "impact": 0.33677372336387634,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987241",
-    "user": "User-5567",
-    "amount": 250.0,
-    "merchant": "Merchant-583.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 8,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 8,
-    "modelScores": {
-      "xgboost": 8,
-      "isolationForest": 18,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.45413699746131897,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.43006274104118347,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.39423343539237976,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.3238687813282013,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.31292182207107544,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988024",
-    "user": "User-7919",
-    "amount": 45.0,
-    "merchant": "Merchant-194.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 3,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 2,
-    "modelScores": {
-      "xgboost": 2,
-      "isolationForest": 8,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.9301654100418091,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.43528124690055847,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.3564426600933075,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3329421281814575,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.30526793003082275,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988434",
-    "user": "User-7919",
-    "amount": 234.95,
-    "merchant": "Merchant-194.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 9,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 14,
-    "modelScores": {
-      "xgboost": 13,
-      "isolationForest": 6,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.7340370416641235,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.37589389085769653,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.2503453493118286,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.2107311636209488,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.19982074201107025,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987288",
-    "user": "User-16578",
-    "amount": 155.521,
-    "merchant": "Merchant-545.0",
+    "id": "TX-5135",
+    "user": "User-Unknown",
+    "amount": 51.6,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
     "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 60,
-    "status": "review",
-    "type": "C",
-    "aiConfidence": 88,
-    "modelScores": {
-      "xgboost": 87,
-      "isolationForest": 39,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.9077830910682678,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.5373659133911133,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.37045198678970337,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.3669348955154419,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.36012667417526245,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987869",
-    "user": "User-9026",
-    "amount": 83.38,
-    "merchant": "Merchant-545.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 49,
+    "timestamp": "2026-08-15 05:45:19",
+    "riskScore": 43,
     "status": "new",
-    "type": "C",
-    "aiConfidence": 62,
+    "type": "W",
+    "aiConfidence": 99,
     "modelScores": {
-      "xgboost": 62,
-      "isolationForest": 60,
-      "autoencoder": 1
+      "xgboost": 43,
+      "isolationForest": 14,
+      "autoencoder": 12
     },
     "explanations": [
       {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.6848099231719971,
-        "direction": "decreases_risk"
+        "feature": "TransactionAmt",
+        "value": 51.6,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "C8",
-        "display_name": "Address/Card Frequency Count 8",
-        "impact": 0.35041725635528564,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.3440689444541931,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.22764770686626434,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C2",
-        "display_name": "Address/Card Frequency Count 2",
-        "impact": 0.21821367740631104,
-        "direction": "increases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -1325,105 +1260,279 @@
     ]
   },
   {
-    "id": "2988164",
-    "user": "User-11106",
-    "amount": 574.95,
-    "merchant": "Merchant-100.0",
+    "id": "TX-1875",
+    "user": "User-Unknown",
+    "amount": 99.58,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
+    "device": "mobile",
+    "timestamp": "2026-08-15 05:17:06",
+    "riskScore": 37,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 96,
+    "modelScores": {
+      "xgboost": 37,
+      "isolationForest": 37,
+      "autoencoder": 12
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 99.58,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-19521",
+    "user": "User-Unknown",
+    "amount": 56.28,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 05:09:13",
+    "riskScore": 19,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 95,
+    "modelScores": {
+      "xgboost": 19,
+      "isolationForest": 12,
+      "autoencoder": 28
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 56.28,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-7972",
+    "user": "User-Unknown",
+    "amount": 41.69,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 05:06:14",
+    "riskScore": 32,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 90,
+    "modelScores": {
+      "xgboost": 32,
+      "isolationForest": 36,
+      "autoencoder": 36
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 41.69,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-8198",
+    "user": "User-Unknown",
+    "amount": 4056.37,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 03:16:34",
+    "riskScore": 76,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 91,
+    "modelScores": {
+      "xgboost": 76,
+      "isolationForest": 90,
+      "autoencoder": 51
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 4056.37,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-6590",
+    "user": "User-Unknown",
+    "amount": 3215.22,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 03:12:37",
+    "riskScore": 75,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 87,
+    "modelScores": {
+      "xgboost": 75,
+      "isolationForest": 60,
+      "autoencoder": 74
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 3215.22,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-1438",
+    "user": "User-Unknown",
+    "amount": 4174.78,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 02:43:23",
+    "riskScore": 92,
+    "status": "review",
+    "type": "W",
+    "aiConfidence": 85,
+    "modelScores": {
+      "xgboost": 92,
+      "isolationForest": 84,
+      "autoencoder": 67
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 4174.78,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
+      },
+      {
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-8061",
+    "user": "User-Unknown",
+    "amount": 277.25,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 02:41:06",
+    "riskScore": 31,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 94,
+    "modelScores": {
+      "xgboost": 31,
+      "isolationForest": 5,
+      "autoencoder": 28
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 277.25,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-7120",
+    "user": "User-Unknown",
+    "amount": 22.34,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-15 02:37:52",
     "riskScore": 18,
     "status": "new",
     "type": "W",
-    "aiConfidence": 28,
-    "modelScores": {
-      "xgboost": 27,
-      "isolationForest": 9,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.0437942743301392,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.4642772376537323,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.3952869176864624,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.3764040768146515,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.29372432827949524,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988062",
-    "user": "User-5009",
-    "amount": 90.872,
-    "merchant": "Merchant-296.0",
-    "location": "Online",
-    "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 74,
-    "status": "review",
-    "type": "C",
     "aiConfidence": 98,
     "modelScores": {
-      "xgboost": 97,
-      "isolationForest": 56,
-      "autoencoder": 24
+      "xgboost": 18,
+      "isolationForest": 13,
+      "autoencoder": 11
     },
     "explanations": [
       {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.8860237002372742,
-        "direction": "increases_risk"
+        "feature": "TransactionAmt",
+        "value": 22.34,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.6435858607292175,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.47976163029670715,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.3929538130760193,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.3653983473777771,
-        "direction": "increases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -1431,52 +1540,34 @@
     ]
   },
   {
-    "id": "2987069",
-    "user": "User-12866",
-    "amount": 20.0,
-    "merchant": "Merchant-303.0",
+    "id": "TX-1717",
+    "user": "User-Unknown",
+    "amount": 216.17,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 31,
+    "device": "mobile",
+    "timestamp": "2026-08-15 00:47:05",
+    "riskScore": 21,
     "status": "new",
-    "type": "S",
-    "aiConfidence": 34,
+    "type": "W",
+    "aiConfidence": 90,
     "modelScores": {
-      "xgboost": 33,
-      "isolationForest": 52,
-      "autoencoder": 0
+      "xgboost": 21,
+      "isolationForest": 14,
+      "autoencoder": 17
     },
     "explanations": [
       {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.9447734355926514,
-        "direction": "increases_risk"
+        "feature": "TransactionAmt",
+        "value": 216.17,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.5756440162658691,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D10",
-        "display_name": "Days Since Previous Transaction 10",
-        "impact": 0.5060796141624451,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C8",
-        "display_name": "Address/Card Frequency Count 8",
-        "impact": 0.4707155227661133,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.33585673570632935,
-        "direction": "decreases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -1484,52 +1575,34 @@
     ]
   },
   {
-    "id": "2988250",
-    "user": "User-9500",
-    "amount": 226.0,
-    "merchant": "Merchant-321.0",
+    "id": "TX-10519",
+    "user": "User-Unknown",
+    "amount": 218.42,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
+    "device": "mobile",
+    "timestamp": "2026-08-15 00:41:50",
     "riskScore": 22,
     "status": "new",
     "type": "W",
-    "aiConfidence": 35,
+    "aiConfidence": 98,
     "modelScores": {
-      "xgboost": 35,
-      "isolationForest": 5,
-      "autoencoder": 0
+      "xgboost": 22,
+      "isolationForest": 14,
+      "autoencoder": 28
     },
     "explanations": [
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.4222673773765564,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.2879490554332733,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.24863512814044952,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.23432719707489014,
-        "direction": "decreases_risk"
-      },
       {
         "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.21044336259365082,
-        "direction": "increases_risk"
+        "value": 218.42,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -1537,900 +1610,34 @@
     ]
   },
   {
-    "id": "2987959",
-    "user": "User-7919",
-    "amount": 73.97,
-    "merchant": "Merchant-194.0",
+    "id": "TX-11780",
+    "user": "User-Unknown",
+    "amount": 128.39,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 12,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 16,
-    "modelScores": {
-      "xgboost": 16,
-      "isolationForest": 14,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.0290499925613403,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.7571864128112793,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C9",
-        "display_name": "Address/Card Frequency Count 9",
-        "impact": 0.4979490339756012,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.4695090055465698,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.46700477600097656,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988406",
-    "user": "User-5146",
-    "amount": 25.0,
-    "merchant": "Merchant-555.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
+    "device": "mobile",
+    "timestamp": "2026-08-15 00:24:45",
     "riskScore": 11,
     "status": "new",
     "type": "W",
-    "aiConfidence": 16,
-    "modelScores": {
-      "xgboost": 15,
-      "isolationForest": 11,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.0661919116973877,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.38747459650039673,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.3802174925804138,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3510463535785675,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.3160074055194855,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988435",
-    "user": "User-16998",
-    "amount": 117.0,
-    "merchant": "Merchant-562.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 13,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 19,
-    "modelScores": {
-      "xgboost": 19,
-      "isolationForest": 10,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 1.0772441625595093,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.7681736946105957,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.6209630966186523,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.4444005489349365,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.31006404757499695,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988097",
-    "user": "User-8320",
-    "amount": 159.0,
-    "merchant": "Merchant-476.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 42,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 69,
-    "modelScores": {
-      "xgboost": 69,
-      "isolationForest": 4,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.4558780789375305,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C11",
-        "display_name": "Address/Card Frequency Count 11",
-        "impact": 0.3985658288002014,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.36057111620903015,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C9",
-        "display_name": "Address/Card Frequency Count 9",
-        "impact": 0.3602156937122345,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.2961420714855194,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987579",
-    "user": "User-7949",
-    "amount": 57.822,
-    "merchant": "Merchant-142.0",
-    "location": "Online",
-    "device": "mobile",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 50,
-    "status": "new",
-    "type": "C",
-    "aiConfidence": 69,
-    "modelScores": {
-      "xgboost": 68,
-      "isolationForest": 45,
-      "autoencoder": 1
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.6307957172393799,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.4128061532974243,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.3682834208011627,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D8",
-        "display_name": "Days Since Previous Transaction 8",
-        "impact": 0.21466659009456635,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C4",
-        "display_name": "Address/Card Frequency Count 4",
-        "impact": 0.19278694689273834,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987212",
-    "user": "User-2560",
-    "amount": 117.0,
-    "merchant": "Merchant-562.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 23,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 36,
-    "modelScores": {
-      "xgboost": 36,
-      "isolationForest": 7,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.5787208080291748,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.2940910756587982,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2607112228870392,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.16808107495307922,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.137793630361557,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987457",
-    "user": "User-3682",
-    "amount": 50.0,
-    "merchant": "Merchant-264.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 10,
-    "status": "new",
-    "type": "H",
-    "aiConfidence": 4,
-    "modelScores": {
-      "xgboost": 4,
-      "isolationForest": 38,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "id_31",
-        "display_name": "Identity Marker 31",
-        "impact": 0.3656432330608368,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.35660386085510254,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "id_17",
-        "display_name": "Identity Marker 17",
-        "impact": 0.2859320342540741,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "id_20",
-        "display_name": "Identity Marker 20",
-        "impact": 0.2820409834384918,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.2542547583580017,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987736",
-    "user": "User-15063",
-    "amount": 100.0,
-    "merchant": "Merchant-nan",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 38,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 59,
-    "modelScores": {
-      "xgboost": 58,
-      "isolationForest": 17,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.9898403882980347,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C9",
-        "display_name": "Address/Card Frequency Count 9",
-        "impact": 0.7570869326591492,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.7293951511383057,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.5226333737373352,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.40380361676216125,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988992",
-    "user": "User-17635",
-    "amount": 994.0,
-    "merchant": "Merchant-565.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 52,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 83,
-    "modelScores": {
-      "xgboost": 82,
-      "isolationForest": 16,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.8240975737571716,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3562891483306885,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2810782790184021,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.27030646800994873,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "P_emaildomain",
-        "display_name": "Purchaser Email Domain",
-        "impact": 0.24649237096309662,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987111",
-    "user": "User-13832",
-    "amount": 18.186,
-    "merchant": "Merchant-375.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 23,
-    "status": "new",
-    "type": "C",
-    "aiConfidence": 28,
-    "modelScores": {
-      "xgboost": 27,
-      "isolationForest": 34,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.464974045753479,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D8",
-        "display_name": "Days Since Previous Transaction 8",
-        "impact": 0.4194042384624481,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.357217013835907,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2804752588272095,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.2573672831058502,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988261",
-    "user": "User-11839",
-    "amount": 160.5,
-    "merchant": "Merchant-490.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 35,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 56,
-    "modelScores": {
-      "xgboost": 55,
-      "isolationForest": 10,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.37586575746536255,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3215513527393341,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.31543636322021484,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.27542948722839355,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.2648901045322418,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987639",
-    "user": "User-15885",
-    "amount": 33.231,
-    "merchant": "Merchant-545.0",
-    "location": "Online",
-    "device": "desktop",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 15,
-    "status": "new",
-    "type": "C",
-    "aiConfidence": 16,
-    "modelScores": {
-      "xgboost": 16,
-      "isolationForest": 30,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.40475383400917053,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.3382706940174103,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.31151628494262695,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2497684508562088,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "R_emaildomain",
-        "display_name": "Receiver Email Domain",
-        "impact": 0.2000017762184143,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987545",
-    "user": "User-2803",
-    "amount": 171.0,
-    "merchant": "Merchant-100.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 9,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 15,
-    "modelScores": {
-      "xgboost": 15,
-      "isolationForest": 3,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "card2",
-        "display_name": "Payment Card ID 2",
-        "impact": 0.4584287703037262,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.28996801376342773,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "P_emaildomain",
-        "display_name": "Purchaser Email Domain",
-        "impact": 0.28008487820625305,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.24186891317367554,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2155047059059143,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988291",
-    "user": "User-11371",
-    "amount": 450.0,
-    "merchant": "Merchant-543.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 44,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 69,
-    "modelScores": {
-      "xgboost": 68,
-      "isolationForest": 15,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.49390316009521484,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.2817562520503998,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.28115108609199524,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.27727559208869934,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.26445361971855164,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987203",
-    "user": "User-18268",
-    "amount": 445.0,
-    "merchant": "Merchant-583.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 28,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 45,
-    "modelScores": {
-      "xgboost": 44,
-      "isolationForest": 9,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.5909194946289062,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.40562668442726135,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.37131866812705994,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D15",
-        "display_name": "Days Since Previous Transaction 15",
-        "impact": 0.27802008390426636,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.27071550488471985,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2987756",
-    "user": "User-8914",
-    "amount": 80.0,
-    "merchant": "Merchant-225.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 7,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 11,
+    "aiConfidence": 89,
     "modelScores": {
       "xgboost": 11,
-      "isolationForest": 3,
-      "autoencoder": 0
+      "isolationForest": 6,
+      "autoencoder": 36
     },
     "explanations": [
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3115813136100769,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 0.27451232075691223,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2544301450252533,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.24179622530937195,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.17250864207744598,
-        "direction": "decreases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988505",
-    "user": "User-11509",
-    "amount": 427.47,
-    "merchant": "Merchant-225.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 5,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 5,
-    "modelScores": {
-      "xgboost": 4,
-      "isolationForest": 12,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.8598111271858215,
-        "direction": "decreases_risk"
-      },
       {
         "feature": "TransactionAmt",
-        "display_name": "Transaction Amount",
-        "impact": 0.36441105604171753,
-        "direction": "increases_risk"
+        "value": 128.39,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.3312247693538666,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.2155901938676834,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.18059208989143372,
-        "direction": "decreases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [
@@ -2438,52 +1645,69 @@
     ]
   },
   {
-    "id": "2988069",
-    "user": "User-2801",
-    "amount": 90.872,
-    "merchant": "Merchant-130.0",
+    "id": "TX-7334",
+    "user": "User-Unknown",
+    "amount": 8.35,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 68,
+    "device": "mobile",
+    "timestamp": "2026-08-15 00:18:05",
+    "riskScore": 30,
+    "status": "new",
+    "type": "W",
+    "aiConfidence": 97,
+    "modelScores": {
+      "xgboost": 30,
+      "isolationForest": 28,
+      "autoencoder": 15
+    },
+    "explanations": [
+      {
+        "feature": "TransactionAmt",
+        "value": 8.35,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
+      },
+      {
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
+      }
+    ],
+    "reasons": [
+      "Automated ML processing"
+    ]
+  },
+  {
+    "id": "TX-13629",
+    "user": "User-Unknown",
+    "amount": 2766.08,
+    "merchant": "Merchant-Unknown",
+    "location": "Online",
+    "device": "mobile",
+    "timestamp": "2026-08-14 23:01:01",
+    "riskScore": 88,
     "status": "review",
-    "type": "C",
-    "aiConfidence": 100,
+    "type": "W",
+    "aiConfidence": 93,
     "modelScores": {
-      "xgboost": 99,
-      "isolationForest": 41,
-      "autoencoder": 0
+      "xgboost": 88,
+      "isolationForest": 64,
+      "autoencoder": 56
     },
     "explanations": [
       {
-        "feature": "C1",
-        "display_name": "Address/Card Frequency Count 1",
-        "impact": 1.9397391080856323,
-        "direction": "increases_risk"
+        "feature": "TransactionAmt",
+        "value": 2766.08,
+        "effect": "increases_risk",
+        "explanation": "Unusually high amount for this profile."
       },
       {
-        "feature": "C13",
-        "display_name": "Address/Card Frequency Count 13",
-        "impact": 0.5560958981513977,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C11",
-        "display_name": "Address/Card Frequency Count 11",
-        "impact": 0.48250386118888855,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C8",
-        "display_name": "Address/Card Frequency Count 8",
-        "impact": 0.44563502073287964,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.4332805871963501,
-        "direction": "increases_risk"
+        "feature": "Location",
+        "value": "Unknown",
+        "effect": "increases_risk",
+        "explanation": "Transaction originated from a high-risk region."
       }
     ],
     "reasons": [
@@ -2491,158 +1715,34 @@
     ]
   },
   {
-    "id": "2987753",
-    "user": "User-2781",
-    "amount": 173.0,
-    "merchant": "Merchant-nan",
+    "id": "TX-7834",
+    "user": "User-Unknown",
+    "amount": 157.15,
+    "merchant": "Merchant-Unknown",
     "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 33,
+    "device": "mobile",
+    "timestamp": "2026-08-14 22:42:18",
+    "riskScore": 29,
     "status": "new",
     "type": "W",
-    "aiConfidence": 53,
+    "aiConfidence": 85,
     "modelScores": {
-      "xgboost": 53,
-      "isolationForest": 5,
-      "autoencoder": 0
+      "xgboost": 29,
+      "isolationForest": 18,
+      "autoencoder": 9
     },
     "explanations": [
       {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.48917603492736816,
-        "direction": "increases_risk"
+        "feature": "TransactionAmt",
+        "value": 157.15,
+        "effect": "decreases_risk",
+        "explanation": "Normal transaction amount."
       },
       {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.33701494336128235,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card5",
-        "display_name": "Payment Card Type",
-        "impact": 0.29321369528770447,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.2885708808898926,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.28706681728363037,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988528",
-    "user": "User-1444",
-    "amount": 151.0,
-    "merchant": "Merchant-490.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 25,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 42,
-    "modelScores": {
-      "xgboost": 42,
-      "isolationForest": 3,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "C5",
-        "display_name": "Address/Card Frequency Count 5",
-        "impact": 0.3166264295578003,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "C14",
-        "display_name": "Address/Card Frequency Count 14",
-        "impact": 0.292623370885849,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C6",
-        "display_name": "Address/Card Frequency Count 6",
-        "impact": 0.2632393538951874,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "card6",
-        "display_name": "Payment Card Credit/Debit",
-        "impact": 0.23202112317085266,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "C2",
-        "display_name": "Address/Card Frequency Count 2",
-        "impact": 0.22404111921787262,
-        "direction": "increases_risk"
-      }
-    ],
-    "reasons": [
-      "Automated ML processing"
-    ]
-  },
-  {
-    "id": "2988282",
-    "user": "User-11839",
-    "amount": 117.0,
-    "merchant": "Merchant-490.0",
-    "location": "Online",
-    "device": "nan",
-    "timestamp": "2023-11-01 14:30:00",
-    "riskScore": 48,
-    "status": "new",
-    "type": "W",
-    "aiConfidence": 78,
-    "modelScores": {
-      "xgboost": 77,
-      "isolationForest": 10,
-      "autoencoder": 0
-    },
-    "explanations": [
-      {
-        "feature": "D2",
-        "display_name": "Days Since Previous Transaction 2",
-        "impact": 0.3429046869277954,
-        "direction": "decreases_risk"
-      },
-      {
-        "feature": "card1",
-        "display_name": "Payment Card ID 1",
-        "impact": 0.33277031779289246,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "hour_of_day",
-        "display_name": "Hour of Day",
-        "impact": 0.31059762835502625,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D3",
-        "display_name": "Days Since Previous Transaction 3",
-        "impact": 0.2743072211742401,
-        "direction": "increases_risk"
-      },
-      {
-        "feature": "D1",
-        "display_name": "Days Since Previous Transaction 1",
-        "impact": 0.2729998826980591,
-        "direction": "increases_risk"
+        "feature": "Device",
+        "value": "Known",
+        "effect": "decreases_risk",
+        "explanation": "Recognized device used."
       }
     ],
     "reasons": [

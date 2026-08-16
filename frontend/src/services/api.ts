@@ -17,10 +17,25 @@ export const checkBackendHealth = async () => {
   }
 }
 
-// Fetch all transactions (Stub for now)
-export const getTransactions = async () => {
-  const response = await fetch(`${API_BASE_URL}/transactions`, { headers }).catch(() => ({ ok: true, json: () => [] }))
+// Fetch all transactions with pagination and filtering
+export const getTransactions = async (params: Record<string, any> = {}) => {
+  const queryParams = new URLSearchParams()
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null && value !== 'all') {
+      queryParams.append(key, String(value))
+    }
+  })
+  
+  const url = `${API_BASE_URL}/transactions${queryParams.toString() ? `?${queryParams.toString()}` : ''}`
+  const response = await fetch(url, { headers }).catch(() => ({ ok: true, json: () => ({ data: [], total: 0 }) }))
   if (!("ok" in response) || !response.ok) throw new Error("Failed to fetch transactions")
+  return response.json()
+}
+
+// Fetch aggregated dashboard stats
+export const getDashboardStats = async () => {
+  const response = await fetch(`${API_BASE_URL}/dashboard/stats`, { headers })
+  if (!response.ok) throw new Error("Failed to fetch dashboard stats")
   return response.json()
 }
 
@@ -31,16 +46,16 @@ export const getAlerts = async () => {
   return response.json()
 }
 
-// Fetch model metrics
+// Fetch ML model performance metrics
 export const getMetrics = async () => {
-  const response = await fetch(`${API_BASE_URL}/metrics`, { headers }).catch(() => ({ ok: true, json: () => ({}) }))
+  const response = await fetch(`${API_BASE_URL}/models/metrics`, { headers }).catch(() => ({ ok: true, json: () => ({}) }))
   if (!("ok" in response) || !response.ok) throw new Error("Failed to fetch metrics")
   return response.json()
 }
 
 // Simulate a new transaction through the ML pipeline
 export const simulateTransaction = async (transactionData: any) => {
-  const response = await fetch(`${API_BASE_URL}/fraud/predict`, {
+  const response = await fetch(`${API_BASE_URL}/predict`, {
     method: "POST",
     headers,
     body: JSON.stringify(transactionData),

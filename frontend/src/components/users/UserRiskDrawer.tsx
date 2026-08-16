@@ -172,9 +172,9 @@ export function UserRiskDrawer({ user, isOpen, onClose }: DrawerProps) {
             
             {/* Action Footer */}
             <div className="p-4 md:p-6 border-t border-border/50 bg-background/50 backdrop-blur-md flex gap-3 justify-end">
-              <Button variant="outline">Reset Risk Profile</Button>
-              <Button variant="secondary">Request Identity Verification</Button>
-              {user.status !== "blocked" && <Button variant="destructive">Block User</Button>}
+              <Button variant="outline" onClick={() => { alert(`Risk profile reset for ${user.name}`); onClose(); }}>Reset Risk Profile</Button>
+              <Button variant="secondary" onClick={() => { alert(`Identity verification requested for ${user.email}`); onClose(); }}>Request Identity Verification</Button>
+              {user.status !== "blocked" && <Button variant="destructive" onClick={() => { alert(`${user.name} has been blocked.`); onClose(); }}>Block User</Button>}
             </div>
           </motion.div>
         </>

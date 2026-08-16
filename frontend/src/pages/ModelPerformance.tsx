@@ -65,10 +65,22 @@ export default function ModelPerformancePage() {
             description="The baseline population used to train all FraudGuard AI models."
             icon={<Database className="h-5 w-5 text-primary" />}
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
             <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center">
               <div className="text-xs text-muted-foreground mb-1">Total Transactions</div>
               <div className="text-2xl font-bold">{dataset.total_transactions?.toLocaleString() ?? "Not evaluated"}</div>
+            </div>
+            <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center">
+              <div className="text-xs text-muted-foreground mb-1">Training Samples</div>
+              <div className="text-2xl font-bold">{dataset.training_samples?.toLocaleString() ?? "Not evaluated"}</div>
+            </div>
+            <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center">
+              <div className="text-xs text-muted-foreground mb-1">Validation Samples</div>
+              <div className="text-2xl font-bold">{dataset.validation_samples?.toLocaleString() ?? "Not evaluated"}</div>
+            </div>
+            <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center">
+              <div className="text-xs text-muted-foreground mb-1">Feature Count</div>
+              <div className="text-2xl font-bold">{dataset.feature_count ?? "Not evaluated"}</div>
             </div>
             <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center border-b-2 border-b-success/50">
               <div className="text-xs text-muted-foreground mb-1">Legitimate Cases</div>
@@ -83,8 +95,8 @@ export default function ModelPerformancePage() {
               <div className="text-2xl font-bold">{dataset.fraud_percentage ? `${dataset.fraud_percentage}%` : "Not evaluated"}</div>
             </div>
             <div className="p-4 rounded-xl bg-background/50 border border-border/50 text-center">
-              <div className="text-xs text-muted-foreground mb-1">Feature Count</div>
-              <div className="text-2xl font-bold">{dataset.feature_count ?? "Not evaluated"}</div>
+              <div className="text-xs text-muted-foreground mb-1">Training Date</div>
+              <div className="text-sm font-bold mt-2 truncate" title={dataset.training_date}>{dataset.training_date ? new Date(dataset.training_date).toLocaleDateString() : "Unknown"}</div>
             </div>
           </div>
         </GlassCard>
@@ -100,7 +112,12 @@ export default function ModelPerformancePage() {
               description="Evaluated on a strictly isolated 10% future temporal test set."
             />
             
-            <div className="grid grid-cols-2 gap-4 my-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-6">
+              <div className="space-y-1 bg-background/30 p-3 rounded-lg border border-border/50 text-center">
+                <p className="text-xs text-muted-foreground uppercase">Accuracy</p>
+                <p className="text-xl font-bold">{xgb.accuracy ? `${xgb.accuracy}%` : "Not evaluated"}</p>
+                <ProgressIndicator value={xgb.accuracy || 0} colorClass="bg-info" className="h-1 mt-2" />
+              </div>
               <div className="space-y-1 bg-background/30 p-3 rounded-lg border border-border/50 text-center">
                 <p className="text-xs text-muted-foreground uppercase">Precision</p>
                 <p className="text-xl font-bold">{xgb.precision ? `${xgb.precision}%` : "Not evaluated"}</p>

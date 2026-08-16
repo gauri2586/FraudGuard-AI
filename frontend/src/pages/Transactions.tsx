@@ -22,6 +22,8 @@ export default function TransactionsPage() {
   const [selectedTx, setSelectedTx] = useState<TransactionDetail | null>(null)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [page, setPage] = useState(1)
+  const [totalItems, setTotalItems] = useState(0)
+  const [totalPages, setTotalPages] = useState(1)
   const itemsPerPage = 5
   
   const [toasts, setToasts] = useState<ToastProps[]>([])
@@ -48,16 +50,25 @@ export default function TransactionsPage() {
   const loadData = async () => {
     setIsLoading(true)
     try {
-      const data = await getTransactions()
+      const params = {
+        page,
+        limit: itemsPerPage,
+        search: searchTerm || undefined,
+        risk: filters.risk,
+        status: filters.status,
+        type: filters.type
+      }
       
-      // If we get an empty array or error, use fallback logic.
-      if (!Array.isArray(data) || data.length === 0) {
+      const response = await getTransactions(params)
+      
+      if (!response || !Array.isArray(response.data)) {
         setTransactions([])
+        setTotalItems(0)
+        setTotalPages(1)
         return
       }
       
-      // Map backend TransactionResponse to frontend TransactionDetail
-      const mapped: TransactionDetail[] = data.map((tx: any) => ({
+      const mapped: TransactionDetail[] = response.data.map((tx: any) => ({
         id: tx.id,
         user: tx.user,
         amount: tx.amount,
@@ -69,11 +80,11 @@ export default function TransactionsPage() {
         status: tx.status,
         type: tx.type,
         aiConfidence: tx.aiConfidence,
-        models: tx.modelScores, // For backwards compatibility
+        models: tx.modelScores,
         modelScores: tx.modelScores,
         anomalyIndicators: [],
         behavioralIndicators: [],
-        explanation: "Dynamic SHAP analysis", // Fallback string
+        explanation: "Dynamic SHAP analysis",
         explanations: tx.explanations || [],
         reasons: tx.reasons || [],
         ipAddress: "192.168.1.1",
@@ -81,6 +92,8 @@ export default function TransactionsPage() {
       }))
       
       setTransactions(mapped)
+      setTotalItems(response.total || 0)
+      setTotalPages(response.totalPages || 1)
     } catch (error) {
       console.error("Failed to load transactions", error)
     } finally {
@@ -89,36 +102,19 @@ export default function TransactionsPage() {
   }
 
   useEffect(() => {
-    loadData()
-  }, [])
+    const delayDebounceFn = setTimeout(() => {
+      loadData()
+    }, 300)
+
+    return () => clearTimeout(delayDebounceFn)
+  }, [page, searchTerm, filters])
 
   const handleFilterChange = (key: string, value: string) => {
     setFilters(prev => ({ ...prev, [key]: value }))
     setPage(1)
   }
 
-  const filteredData = useMemo(() => {
-    return transactions.filter(tx => {
-      const matchSearch = 
-        tx.id.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        tx.user.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tx.merchant.toLowerCase().includes(searchTerm.toLowerCase())
-      
-      const matchStatus = filters.status === "all" || tx.status === filters.status
-      const matchType = filters.type === "all" || tx.type === filters.type
-      
-      let matchRisk = true
-      if (filters.risk !== "all") {
-        const riskLevel = tx.riskScore <= 30 ? "low" : tx.riskScore <= 60 ? "medium" : tx.riskScore <= 80 ? "high" : "critical"
-        matchRisk = riskLevel === filters.risk
-      }
-
-      return matchSearch && matchStatus && matchType && matchRisk
-    })
-  }, [searchTerm, filters, transactions])
-
-  const totalPages = Math.max(1, Math.ceil(filteredData.length / itemsPerPage))
-  const currentData = filteredData.slice((page - 1) * itemsPerPage, page * itemsPerPage)
+  const currentData = transactions
 
   const openInvestigation = (tx: TransactionDetail) => {
     setSelectedTx(tx)
@@ -172,7 +168,10 @@ export default function TransactionsPage() {
 
       <motion.div variants={itemVariants}>
         <TransactionFilters 
-          onSearch={setSearchTerm} 
+          onSearch={(term) => {
+            setSearchTerm(term)
+            setPage(1)
+          }} 
           onFilterChange={handleFilterChange} 
         />
       </motion.div>
@@ -250,7 +249,7 @@ export default function TransactionsPage() {
           {/* Pagination */}
           <div className="flex items-center justify-between p-4 border-t border-border/50 bg-background/30">
             <span className="text-sm text-muted-foreground">
-              Showing {(page - 1) * itemsPerPage + 1} to {Math.min(page * itemsPerPage, filteredData.length)} of {filteredData.length} entries
+              Showing {totalItems === 0 ? 0 : (page - 1) * itemsPerPage + 1} to {Math.min(page * itemsPerPage, totalItems)} of {totalItems} entries
             </span>
             <div className="flex items-center gap-2">
               <Button 
@@ -295,7 +294,7 @@ export default function TransactionsPage() {
         )}
         
         {/* Mobile Pagination */}
-        {filteredData.length > 0 && (
+        {totalItems > 0 && (
           <div className="flex items-center justify-between mt-4">
             <Button 
               variant="outline" 

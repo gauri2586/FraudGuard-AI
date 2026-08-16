@@ -1,0 +1,11 @@
+{
+    "model_name": "Lightweight Autoencoder Anomaly Detector",
+    "training_date": "2026-08-15T21:38:16.466147",
+    "training_rows_used": 50000,
+    "validation_rows": 118108,
+    "metrics": {
+        "avg_anomaly_score_fraud": 2.354232660025233,
+        "avg_anomaly_score_legit": 1.1650344175194225,
+        "score_difference": 1.1891982425058103
+    }
+}

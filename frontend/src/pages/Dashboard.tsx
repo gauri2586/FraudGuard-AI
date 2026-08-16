@@ -12,12 +12,12 @@ import { VolumeChart } from "@/components/charts/VolumeChart"
 import { DistributionChart } from "@/components/charts/DistributionChart"
 import type { RiskLevel } from "@/components/ui/RiskBadge"
 import { containerVariants, itemVariants } from "@/lib/animations"
-import { simulateTransaction, getTransactions, getAlerts, checkBackendHealth } from "@/services/api"
+import { getDashboardStats, simulateTransaction, getAlerts, checkBackendHealth } from "@/services/api"
 import { formatINR } from "@/lib/utils"
 
 export default function Dashboard() {
   const [isSimulating, setIsSimulating] = useState(false)
-  const [transactions, setTransactions] = useState<any[]>([])
+  const [stats, setStats] = useState<any>(null)
   const [alerts, setAlerts] = useState<any[]>([])
   const [health, setHealth] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
@@ -25,12 +25,12 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [txs, alts, hlth] = await Promise.all([
-          getTransactions(),
+        const [dashboardStats, alts, hlth] = await Promise.all([
+          getDashboardStats(),
           getAlerts(),
           checkBackendHealth()
         ])
-        setTransactions(txs || [])
+        setStats(dashboardStats || null)
         setAlerts(alts || [])
         setHealth(hlth === true)
       } catch (e) {
@@ -70,51 +70,17 @@ export default function Dashboard() {
   }
 
   const dashboardData = useMemo(() => {
-    if (!transactions.length) return null
-
-    const totalTransactions = transactions.length
-    const fraudTxs = transactions.filter(t => t.riskScore >= 80)
-    const suspiciousTxs = transactions.filter(t => t.riskScore >= 60 && t.riskScore < 80)
-    
-    const moneyAtRisk = transactions.filter(t => t.riskScore >= 60).reduce((sum, t) => sum + (t.amount || 0), 0)
-
-    const typeMap: Record<string, number> = {}
-    transactions.filter(t => t.riskScore >= 60).forEach(t => {
-      const typ = t.type || 'Online'
-      typeMap[typ] = (typeMap[typ] || 0) + 1
-    })
-    const distributionData = Object.keys(typeMap).map(k => ({ name: k, value: typeMap[k] }))
-
-    const datesMap: Record<string, any> = {}
-    transactions.forEach(t => {
-      const d = (t.timestamp || "").split(" ")[0] || "Unknown"
-      if (!datesMap[d]) datesMap[d] = { name: d, time: d, volume: 0, fraud: 0, suspicious: 0 }
-      datesMap[d].volume += 1
-      if (t.riskScore >= 80) datesMap[d].fraud += 1
-      else if (t.riskScore >= 60) datesMap[d].suspicious += 1
-    })
-    const timeData = Object.values(datesMap).sort((a,b) => a.time.localeCompare(b.time))
-
-    const recentHighRisk = transactions
-      .filter(t => t.riskScore >= 60)
-      .sort((a,b) => b.timestamp.localeCompare(a.timestamp))
-      .slice(0, 5)
+    if (!stats) return null
 
     const activeAlerts = alerts
       .filter(a => a.status === 'New' || a.status === 'Investigating')
       .slice(0, 5)
 
     return {
-      totalTransactions,
-      fraudDetected: fraudTxs.length,
-      suspicious: suspiciousTxs.length,
-      moneyAtRisk,
-      distributionData: distributionData.length ? distributionData : [{name: "No Fraud", value: 1}],
-      timeData,
-      recentHighRisk,
+      ...stats,
       activeAlerts
     }
-  }, [transactions, alerts])
+  }, [stats, alerts])
 
   if (isLoading) {
     return <div className="p-20 text-center text-muted-foreground">Loading AI Dashboard...</div>
@@ -185,13 +151,13 @@ export default function Dashboard() {
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <motion.div variants={itemVariants} className="lg:col-span-2 min-w-0">
           <GlassCard className="h-full">
-            <SectionHeader title="Fraud Detection Trends" description="Flagged transactions over time" />
+            <SectionHeader title="Fraud Detection Trends (Demo Data)" description="Flagged transactions over time" />
             <TrendChart data={dashboardData.timeData} />
           </GlassCard>
         </motion.div>
         <motion.div variants={itemVariants} className="min-w-0">
           <GlassCard className="h-full">
-            <SectionHeader title="Fraud Distribution" description="By payment method" />
+            <SectionHeader title="Fraud Distribution (Demo Data)" description="By payment method" />
             <DistributionChart data={dashboardData.distributionData} />
           </GlassCard>
         </motion.div>
@@ -203,7 +169,7 @@ export default function Dashboard() {
         <motion.div variants={itemVariants} className="lg:col-span-2 min-w-0">
           <GlassCard className="h-full overflow-hidden flex flex-col">
             <SectionHeader 
-              title="Recent High-Risk Transactions" 
+              title="Recent High-Risk Transactions (Demo Data)" 
               actions={
                 <Button variant="ghost" size="sm" className="text-xs shrink-0" onClick={() => window.location.href='/transactions'}>
                   View All <ArrowRight className="ml-1 h-3 w-3" />
@@ -329,7 +295,7 @@ export default function Dashboard() {
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <motion.div variants={itemVariants} className="lg:col-span-2 min-w-0">
           <GlassCard className="h-full">
-            <SectionHeader title="Transaction Volume Overview" />
+            <SectionHeader title="Transaction Volume Overview (Demo Data)" />
             <VolumeChart data={dashboardData.timeData} />
           </GlassCard>
         </motion.div>

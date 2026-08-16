@@ -8,7 +8,7 @@ import { ProgressIndicator } from "@/components/ui/ProgressIndicator"
 import { AnimatedRiskScore } from "@/components/investigation/AnimatedRiskScore"
 import { RiskFactorChart } from "@/components/investigation/RiskFactorChart"
 import { containerVariants, itemVariants } from "@/lib/animations"
-import { getTransactions } from "@/services/api"
+import { getTransactions, simulateTransaction } from "@/services/api"
 import { TransactionDetail } from "@/data/mockTransactions"
 import { cn } from "@/lib/utils"
 
@@ -16,13 +16,16 @@ export default function InvestigationPage() {
   const [transactions, setTransactions] = useState<TransactionDetail[]>([])
   const [selectedTxId, setSelectedTxId] = useState<string>("")
   const [isLoading, setIsLoading] = useState(true)
+  const [livePrediction, setLivePrediction] = useState<any>(null)
+  const [isAnalyzing, setIsAnalyzing] = useState(false)
 
   useEffect(() => {
     const load = async () => {
       try {
-        const data = await getTransactions()
-        if (Array.isArray(data) && data.length > 0) {
-          const mapped: TransactionDetail[] = data.map((tx: any) => ({
+        const response = await getTransactions({ limit: 50 })
+        const txs = response.data || response // Handle paginated or raw array
+        if (Array.isArray(txs) && txs.length > 0) {
+          const mapped: TransactionDetail[] = txs.map((tx: any) => ({
             id: tx.id,
             user: tx.user,
             amount: tx.amount,
@@ -58,13 +61,49 @@ export default function InvestigationPage() {
 
   const selectedTx = transactions.find(t => t.id === selectedTxId)
 
+  useEffect(() => {
+    if (!selectedTx) return
+    const analyze = async () => {
+      setIsAnalyzing(true)
+      try {
+        const payload = {
+          transaction_id: selectedTx.id,
+          amount: selectedTx.amount || 1.0,
+          transaction_type: selectedTx.type || "Unknown",
+          merchant_category: selectedTx.merchant || "Unknown",
+          location: selectedTx.location || "Online",
+          device_type: selectedTx.device || "Unknown",
+          time_since_last_transaction: 86400 // Default feature logic for missing data
+        }
+        const result = await simulateTransaction(payload)
+        setLivePrediction(result)
+      } catch (err) {
+        console.error("Analysis failed", err)
+      } finally {
+        setIsAnalyzing(false)
+      }
+    }
+    analyze()
+  }, [selectedTxId])
+
+  // Derive display values from livePrediction if available, else fallback to selectedTx
+  const displayScore = livePrediction?.final_risk_score ?? selectedTx?.riskScore ?? 0
+  const displayConfidence = livePrediction?.fraud_probability ?? selectedTx?.aiConfidence ?? 0
+  const displayModels = livePrediction ? {
+    xgboost: livePrediction.xgboost_score ?? 0,
+    isolationForest: livePrediction.isolation_forest_score ?? 0,
+    autoencoder: livePrediction.autoencoder_score ?? 0
+  } : (selectedTx?.modelScores || { xgboost: 0, isolationForest: 0, autoencoder: 0 })
+  
+  const displayExplanations = livePrediction?.explanations || selectedTx?.explanations || []
+
   const getRecommendation = (score: number) => {
     if (score >= 80) return { text: "High probability of anomaly. Recommend manual investigation and potential block.", icon: AlertOctagon, color: "text-destructive", bg: "bg-destructive/10 border-destructive/20" }
     if (score >= 60) return { text: "Potential anomaly detected. Requires manual review.", icon: AlertTriangle, color: "text-orange-500", bg: "bg-orange-500/10 border-orange-500/20" }
     return { text: "Low-risk transaction. No immediate action required.", icon: CheckCircle2, color: "text-success", bg: "bg-success/10 border-success/20" }
   }
 
-  const recommendation = selectedTx ? getRecommendation(selectedTx.riskScore) : null
+  const recommendation = selectedTx ? getRecommendation(displayScore) : null
 
   return (
     <motion.div 
@@ -162,12 +201,19 @@ export default function InvestigationPage() {
                 </h3>
                 
                 <div className="mt-4">
-                  <AnimatedRiskScore score={selectedTx.riskScore} />
+                  {isAnalyzing ? (
+                    <div className="h-[200px] flex flex-col items-center justify-center text-muted-foreground animate-pulse">
+                      <Cpu className="h-10 w-10 mb-4 opacity-50" />
+                      <p>Running ML Inference...</p>
+                    </div>
+                  ) : (
+                    <AnimatedRiskScore score={displayScore} />
+                  )}
                 </div>
                 
                 <div className="text-center mt-2 mb-6">
-                  <div className="text-sm font-semibold uppercase">Risk Level: {selectedTx.riskScore >= 80 ? "Critical" : selectedTx.riskScore >= 60 ? "High" : selectedTx.riskScore >= 30 ? "Medium" : "Low"}</div>
-                  <div className="text-xs text-muted-foreground">Fraud Probability: {selectedTx.aiConfidence}%</div>
+                  <div className="text-sm font-semibold uppercase">Risk Level: {displayScore >= 80 ? "Critical" : displayScore >= 60 ? "High" : displayScore >= 30 ? "Medium" : "Low"}</div>
+                  <div className="text-xs text-muted-foreground">Fraud Probability: {displayConfidence}%</div>
                 </div>
 
                 <div className="space-y-4 mt-auto pt-6 border-t border-border/50">
@@ -176,21 +222,21 @@ export default function InvestigationPage() {
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between items-center">
                       <span>XGBoost (Classification)</span>
-                      <span className="font-medium">{selectedTx.modelScores.xgboost}%</span>
+                      <span className="font-medium">{displayModels.xgboost}%</span>
                     </div>
-                    <ProgressIndicator value={selectedTx.modelScores.xgboost} colorClass="bg-primary" className="h-1.5" />
+                    <ProgressIndicator value={displayModels.xgboost} colorClass="bg-primary" className="h-1.5" />
                     
                     <div className="flex justify-between items-center pt-1">
                       <span>Isolation Forest (Anomaly)</span>
-                      <span className="font-medium">{selectedTx.modelScores.isolationForest}%</span>
+                      <span className="font-medium">{displayModels.isolationForest}%</span>
                     </div>
-                    <ProgressIndicator value={selectedTx.modelScores.isolationForest} colorClass="bg-warning" className="h-1.5" />
+                    <ProgressIndicator value={displayModels.isolationForest} colorClass="bg-warning" className="h-1.5" />
                     
                     <div className="flex justify-between items-center pt-1">
                       <span>Autoencoder (Reconstruction)</span>
-                      <span className="font-medium">{selectedTx.modelScores.autoencoder}%</span>
+                      <span className="font-medium">{displayModels.autoencoder}%</span>
                     </div>
-                    <ProgressIndicator value={selectedTx.modelScores.autoencoder} colorClass="bg-destructive" className="h-1.5" />
+                    <ProgressIndicator value={displayModels.autoencoder} colorClass="bg-destructive" className="h-1.5" />
                   </div>
                 </div>
               </GlassCard>
@@ -205,20 +251,32 @@ export default function InvestigationPage() {
                   <Network className="h-4 w-4 text-secondary" /> Explainable AI (SHAP)
                 </h3>
                 <div className="space-y-3">
-                  {selectedTx.explanations && selectedTx.explanations.length > 0 ? (
-                    selectedTx.explanations.map((exp: any, i: number) => (
-                      <div key={i} className="flex justify-between items-start border-b border-border/50 pb-3 last:border-0 last:pb-0">
-                         <div>
-                           <div className="text-sm font-medium">{exp.display_name}</div>
-                           <div className="text-xs text-muted-foreground mt-0.5">
-                             {exp.direction === 'increases_risk' ? 'Increases risk factor' : 'Decreases risk factor'}
+                  {isAnalyzing ? (
+                    <div className="text-sm text-muted-foreground p-4 text-center border border-dashed border-border/50 rounded-lg animate-pulse">
+                      Computing SHAP values...
+                    </div>
+                  ) : displayExplanations && displayExplanations.length > 0 ? (
+                    displayExplanations.map((exp: any, i: number) => {
+                      // Support both new (live API) and old (seed data) formats seamlessly
+                      const featureName = exp.feature || exp.display_name || "Unknown Feature"
+                      const effect = exp.effect || exp.direction || "increases_risk"
+                      const explanation = exp.explanation || (effect === 'increases_risk' ? 'Increases risk factor' : 'Decreases risk factor')
+                      const impactValue = exp.shap_value !== undefined ? exp.shap_value : exp.impact !== undefined ? exp.impact : 0
+                      
+                      return (
+                        <div key={i} className="flex justify-between items-start border-b border-border/50 pb-3 last:border-0 last:pb-0">
+                           <div>
+                             <div className="text-sm font-medium">{featureName}</div>
+                             <div className="text-xs text-muted-foreground mt-0.5">
+                               {explanation}
+                             </div>
                            </div>
-                         </div>
-                         <div className={cn("flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-full", exp.direction === 'increases_risk' ? 'bg-destructive/10 text-destructive' : 'bg-success/10 text-success')}>
-                           {exp.direction === 'increases_risk' ? '↑' : '↓'}{Math.abs(exp.impact * 100).toFixed(1)}
-                         </div>
-                      </div>
-                    ))
+                           <div className={cn("flex items-center gap-1 text-xs font-semibold px-2 py-1 rounded-full shrink-0", effect === 'increases_risk' ? 'bg-destructive/10 text-destructive' : 'bg-success/10 text-success')}>
+                             {effect === 'increases_risk' ? '↑' : '↓'}{Math.abs(impactValue * 100).toFixed(1)}
+                           </div>
+                        </div>
+                      )
+                    })
                   ) : (
                     <div className="text-sm text-muted-foreground p-4 text-center border border-dashed border-border/50 rounded-lg">
                       No significant SHAP factors isolated.
